@@ -3,33 +3,37 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
-  }
-  
-  body {
+}
+
+body {
     height: 100vh;
     background-color: #000;
     background-image: url('https://images8.alphacoders.com/135/1355049.png');
     background-size: cover;
     background-position: center;
 }
-li{
+
+li {
     list-style: none;
 }
-a{
+
+a {
     text-decoration: none;
     color: #ffffff;
     font-size: 1rem;
 
 }
-a:hover{
-    color: orange;
+a:hover {
+    color: coral;
 }
+
 /* HEADER */
-header{
+header {
     position: relative;
     padding: 0 2rem;
 }
-.navbar{
+
+.barra {
     width: 100%;
     height: 60px;
     max-width: 1200px;
@@ -37,71 +41,83 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
+
 }
-.navbar .logo a{
+
+.barra .logo a {
     font-size: 1.5rem;
     font-weight: bold;
 }
-.navbar .links{
+
+.barra .links {
     display: flex;
-    gap: 2rem;
+    gap: 3rem;
+    font-weight: bold;
 }
-.navbar .toggle_btn{
+
+.barra .toggle_btn {
     color: #ffffff;
     font-size: 1.5rem;
     cursor: pointer;
     display: none;
 }
-.action_btn{
+
+.action_btn {
     background-color: orange;
     color: #ffffff;
     padding: 0.5rem 1rem;
     border: none;
     outline: none;
-    border-radius: 20px;
-    font-size: 0.8rem;
+    border-radius: 10px;
+    font-size: 1rem;
     font-weight: bold;
     cursor: pointer;
     transition: scale 0.2 ease;
 }
-.action_btn:hover{
-    scale: 1.05;
-    color: #ffffff;   
+
+.action_btn:hover {
+    scale: 1;
+    color: #ffffff;
 }
-.action_btn:active{
-    scale: 0.95;
+
+.action_btn:active {
+    scale: 1;
 }
+
 /* DROPDOWN MENU */
-.dropdown_menu{
+.dropdown_menu {
     display: none;
     position: absolute;
-    right: 2rem;
+    right: 0.5rem;
     top: 60px;
     height: 0;
     width: 300px;
-    background: rgba(255,255,255,0.1);
+    background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(15px);
     border-radius: 10px;
     overflow: hidden;
-    transition: height 0.2s cubic-bezier(0.175,0.885,0.32,1.275);
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
-.dropdown_menu.open{
-    height: 240px;
+
+.dropdown_menu.open {
+    height: min-content;
 }
-.dropdown_menu li{
-    padding: 0.7rem;
+
+.dropdown_menu li {
+    padding: 0.5rem;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
 }
-.dropdown_menu .action_btn{
+
+.dropdown_menu .action_btn {
     width: 100%;
     display: flex;
     justify-content: center;
 }
 
-/*HERO*/
-section#hero{
+/*contenido*/
+section#contenido {
     height: calc(100vh - 60px);
     display: flex;
     flex-direction: column;
@@ -110,28 +126,75 @@ section#hero{
     text-align: center;
     color: #ffffff;
 }
-#hero h1{
+
+#contenido h1 {
     font-size: 3rem;
     margin-bottom: 1rem;
 }
 
 /* RESPONSIVE DESIGN */
-@media(max-width: 992px){
-    .navbar .links,
-    .navbar .action_btn{
-        display:  none;
+@media(max-width: 992px) {
+
+    .barra .links,
+    .barra .action_btn {
+        display: none;
     }
-    .navbar .toggle_btn{
+
+    .barra .toggle_btn {
         display: block;
     }
-    .dropdown_menu{
+
+    .dropdown_menu {
         display: block;
 
     }
 }
-@media(max-width: 576px){
-    .dropdown_menu{
+
+@media(max-width: 576px) {
+    .dropdown_menu {
         left: 2rem;
         width: unset;
     }
+}
+
+/* Cards */
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.card {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 2rem;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.card i {
+    font-size: 3rem;
+    color: orange;
+    margin-bottom: 1rem;
+}
+
+.card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.card p {
+    font-size: 1rem;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.copyright-text {
+    font-size: 1rem;
+    color: #000000;
+    text-align: center;
+    margin-top: 30px;
 }
