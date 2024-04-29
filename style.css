@@ -40,7 +40,10 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-
+    padding: 0 20px; /* Agrega relleno a los lados */
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
 }
 
 .navbar .logo a {
@@ -50,8 +53,7 @@ header {
 
 .navbar .links {
     display: flex;
-    gap: 3rem;
-    font-weight: bold;
+    gap: 20px; /* Espacio entre los elementos */
 }
 
 .navbar .toggle_btn {
@@ -60,6 +62,7 @@ header {
     cursor: pointer;
     display: none;
 }
+
 
 .action_btn {
     background-color: #a7005e;
@@ -87,8 +90,8 @@ header {
 .dropdown_menu {
     display: none;
     position: absolute;
-    right: 0.5rem;
-    top: 60px;
+    right: 2rem;
+    top: 70px;
     height: 0;
     width: 300px;
     background: rgba(255, 255, 255, 0.1);
@@ -117,17 +120,21 @@ header {
 
 /*contenido*/
 section#contenido {
-    height: calc(100vh - 60px);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+    min-height: 300px; /* Establece una altura mínima para evitar que el contenido se contraiga demasiado */
+    width: 80%; /* Ajusta el ancho del contenido */
+    max-width: 800px; /* Limita el ancho máximo del contenido */
+    margin: 35px auto; /* Centra horizontalmente y agrega margen */
+    padding: 20px; /* Agrega relleno alrededor del contenido */
+    border-radius: 10px; /* Establece el radio de borde */
+    overflow: hidden; /* Oculta cualquier parte del contenido que se desborda del contenedor */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Añade una sombra */
+    text-align: justify; /* Justifica el texto */
     color: #ffffff;
 }
 
+
 #contenido h1 {
-    font-size: 3rem;
+    font-size: 4rem;
     margin-bottom: 1rem;
 }
 
@@ -159,13 +166,20 @@ section#contenido {
 /* Cards */
 .cards {
     display: flex;
-    justify-content: center;
-    gap: 2rem;
-    margin-top: 3rem;
+    flex-wrap: wrap; /* Permite que las tarjetas se envuelvan cuando no hay suficiente espacio horizontal */
+    justify-content: center; /* Centra las tarjetas horizontalmente */
+    gap: 1rem;
+    margin-top: 2rem;
+    margin: 2rem auto; /* Margen superior e inferior de 2rem y margen izquierdo y derecho automático para centrar horizontalmente */
+    max-width: 1000px; /* Ajusta el ancho máximo para evitar que las tarjetas se extiendan demasiado en pantallas grandes */
 }
 
 .twitch-card {
     background-color: #6441A4; /* Puedes cambiar el color a tu preferencia */
+}
+
+.discord-card {
+    background-color: #7289DA; /* Puedes cambiar el color a tu preferencia */
 }
 
 .instagram-card {
@@ -184,7 +198,7 @@ section#contenido {
     margin: 10px;
     transition: transform 0.3s ease;
 }
-
+/*Iconos*/
 .card i {
     font-size: 3rem;
     color: rgb(255, 255, 255);
