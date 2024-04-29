@@ -165,11 +165,24 @@ section#contenido {
     margin-top: 3rem;
 }
 
+.twitch-card {
+    background-color: #6441A4; /* Puedes cambiar el color a tu preferencia */
+}
+
+.instagram-card {
+    background-color: #C13584; /* Puedes cambiar el color a tu preferencia */
+}
+
+.youtube-card {
+    background-color: #FF0000; /* Puedes cambiar el color a tu preferencia */
+}
+
 .card {
-    background-color: rgba(255, 255, 255, 0.1);
     border-radius: 10px;
-    padding: 2rem;
+    padding: 20px;
     text-align: center;
+    color: #ffffff;
+    margin: 10px;
     transition: transform 0.3s ease;
 }
 
