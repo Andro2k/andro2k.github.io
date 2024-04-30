@@ -6,12 +6,13 @@
 }
 
 body {
-    height: 100vh;
+    height: 100%;
     background-color: #000;
-    background-image: url('https://images8.alphacoders.com/135/1355049.png');
+    background-image: url('https://mfiles.alphacoders.com/101/1011817.png');
+    backdrop-filter: blur(5px);
     background-position: top;
 }
-
+ 
 li {
     list-style: none;
 }
@@ -20,8 +21,8 @@ a {
     text-decoration: none;
     color: #ffffff;
     font-size: 1rem;
-
 }
+
 a:hover {
     color: #252525;
 }
@@ -40,7 +41,11 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-
+    padding: 0 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
 }
 
 .navbar .logo a {
@@ -50,8 +55,8 @@ header {
 
 .navbar .links {
     display: flex;
-    gap: 3rem;
-    font-weight: bold;
+    gap: 20px;
+    /* Espacio entre los elementos */
 }
 
 .navbar .toggle_btn {
@@ -61,13 +66,12 @@ header {
     display: none;
 }
 
+
 .action_btn {
     background-color: #a7005e;
     color: #ffffff;
     padding: 0.5rem 1rem;
-    border: none;
-    outline: none;
-    border-radius: 10px;
+
     font-size: 1rem;
     font-weight: bold;
     cursor: pointer;
@@ -75,24 +79,24 @@ header {
 }
 
 .action_btn:hover {
-    scale: 1;
-    color: #ffffff;
+    scale: 1.05;
+    background-color: #ffffff;
 }
 
 .action_btn:active {
-    scale: 1;
+    scale: 1.1;
 }
 
 /* DROPDOWN MENU */
 .dropdown_menu {
     display: none;
     position: absolute;
-    right: 0.5rem;
-    top: 60px;
+    right: 2rem;
+    top: 70px;
     height: 0;
     width: 300px;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(15px);
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(0px);
     border-radius: 10px;
     overflow: hidden;
     transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -117,17 +121,31 @@ header {
 
 /*contenido*/
 section#contenido {
-    height: calc(100vh - 60px);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+    min-height: 200px;
+    /* Establece una altura mínima para evitar que el contenido se contraiga demasiado */
+    width: 100%;
+    /* Ajusta el ancho del contenido */
+    max-width: 1200px;
+    /* Limita el ancho máximo del contenido */
+    margin: 25px auto;
+    /* Centra horizontalmente y agrega margen */
+    padding: 20px;
+    /* Agrega relleno alrededor del contenido */
+    border-radius: 10px;
+    /* Establece el radio de borde */
+    overflow: hidden;
+    /* Oculta cualquier parte del contenido que se desborda del contenedor */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    /* Añade una sombra */
+    text-align: justify;
+    /* Justifica el texto */
     color: #ffffff;
+    background-color: hsla(0, 0%, 15%, 0.288);
 }
 
+
 #contenido h1 {
-    font-size: 3rem;
+    font-size: 4rem;
     margin-bottom: 1rem;
 }
 
@@ -138,11 +156,9 @@ section#contenido {
     .navbar .action_btn {
         display: none;
     }
-
     .navbar .toggle_btn {
         display: block;
     }
-
     .dropdown_menu {
         display: block;
 
@@ -158,22 +174,45 @@ section#contenido {
 
 /* Cards */
 .cards {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    margin-top: 3rem;
+    flex-wrap: wrap; 
+    justify-content: center; 
+    margin-top: 2rem; 
+    /* Establece un margen superior de 2rem para las tarjetas. */
+    margin: 2rem auto; 
+    /* Esta regla es redundante ya que la propiedad margin-top ya establece un margen superior y también establece un margen izquierdo y derecho automáticos para centrar horizontalmente. Puedes eliminar esta línea si solo deseas mantener el margen superior. */
+    max-width: 1200px; 
+    /* Esta propiedad establece un ancho máximo para el contenedor de las tarjetas, asegurando que no se extiendan demasiado en pantallas grandes y manteniendo un diseño agradable. */
+    display: grid; 
+    /* Esta propiedad establece el contenedor de tarjetas como un grid (cuadrícula). */
+    width: min(100%, 100%); 
+    /* Esta regla es redundante ya que `width: 100%` ya establece el ancho del contenedor de tarjetas como el 100% del ancho del contenedor principal. Puedes eliminar esta línea. */
+    margin-inline: auto; 
+    /* Esta propiedad es útil para establecer un margen izquierdo y derecho automáticos, lo que ayuda a centrar horizontalmente el contenedor de tarjetas dentro de su contenedor principal. */   
+    grid-template-columns: repeat(auto-fit, minmax(min(15rem, 100%), 1fr)); 
+    /* Esta propiedad establece el número y el tamaño de las columnas en el grid de las tarjetas. `auto-fit` permite que el navegador decida automáticamente cuántas columnas pueden caber en una fila. `minmax(min(20rem, 100%), 1fr)` establece que el ancho mínimo de una columna es de 20rem, pero puede ocupar hasta el 100% del ancho disponible, y cada columna tiene un tamaño igual (1fr) dentro del grid. Esto garantiza que las tarjetas sean responsivas y se ajusten según el espacio disponible. */
+    gap:1rem; 
+    /* Esta propiedad establece el espacio entre las tarjetas. */
 }
 
+
 .twitch-card {
-    background-color: #6441A4; /* Puedes cambiar el color a tu preferencia */
+    background-color: #6441A4;
+    /* Puedes cambiar el color a tu preferencia */
+}
+
+.discord-card {
+    background-color: #7289DA;
+    /* Puedes cambiar el color a tu preferencia */
 }
 
 .instagram-card {
-    background-color: #C13584; /* Puedes cambiar el color a tu preferencia */
+    background-color: #C13584;
+    /* Puedes cambiar el color a tu preferencia */
 }
 
 .youtube-card {
-    background-color: #FF0000; /* Puedes cambiar el color a tu preferencia */
+    background-color: #FF0000;
+    /* Puedes cambiar el color a tu preferencia */
 }
 
 .card {
@@ -181,16 +220,16 @@ section#contenido {
     padding: 20px;
     text-align: center;
     color: #ffffff;
-    margin: 10px;
+    margin: 20px;
     transition: transform 0.3s ease;
 }
 
+/*Iconos*/
 .card i {
     font-size: 3rem;
     color: rgb(255, 255, 255);
     margin-bottom: 1rem;
 }
-
 .card h2 {
     font-size: 1.5rem;
     margin-bottom: 1rem;
@@ -202,11 +241,12 @@ section#contenido {
 
 .card:hover {
     transform: translateY(-10px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
 }
 
 .copyright-text {
-    font-size: 1rem;
-    color: #000000;
+    font-size: 1.2rem;
+    color: #ffffff;
     text-align: center;
     margin-top: 30px;
 }
