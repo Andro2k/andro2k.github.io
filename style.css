@@ -24,7 +24,7 @@ a {
 }
 
 a:hover {
-    color: #252525;
+    color: #ffffff;
 }
 
 /* HEADER */
@@ -68,10 +68,9 @@ header {
 
 
 .action_btn {
-    background-color: #a7005e;
+    background-color: #25252525;
     color: #ffffff;
     padding: 0.5rem 1rem;
-
     font-size: 1rem;
     font-weight: bold;
     cursor: pointer;
@@ -80,7 +79,7 @@ header {
 
 .action_btn:hover {
     scale: 1.05;
-    background-color: #ffffff;
+    background-color: #6441A4;
 }
 
 .action_btn:active {
@@ -95,11 +94,13 @@ header {
     top: 70px;
     height: 0;
     width: 300px;
-    background: rgba(255, 255, 255, 0.3);
-    backdrop-filter: blur(0px);
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(100px);
     border-radius: 10px;
     overflow: hidden;
     transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
 }
 
 .dropdown_menu.open {
@@ -111,6 +112,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
 
 .dropdown_menu .action_btn {
@@ -196,23 +198,19 @@ section#contenido {
 
 
 .twitch-card {
-    background-color: #6441A4;
-    /* Puedes cambiar el color a tu preferencia */
+    background-color: #6441A4; 
 }
 
 .discord-card {
     background-color: #7289DA;
-    /* Puedes cambiar el color a tu preferencia */
 }
 
 .instagram-card {
-    background-color: #C13584;
-    /* Puedes cambiar el color a tu preferencia */
+    background-color: #C13584; 
 }
 
 .youtube-card {
     background-color: #FF0000;
-    /* Puedes cambiar el color a tu preferencia */
 }
 
 .card {
@@ -230,6 +228,8 @@ section#contenido {
     color: rgb(255, 255, 255);
     margin-bottom: 1rem;
 }
+
+/*Titulos */
 .card h2 {
     font-size: 1.5rem;
     margin-bottom: 1rem;
@@ -241,7 +241,7 @@ section#contenido {
 
 .card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 30px #ffffff;
 }
 
 .copyright-text {
