@@ -46,13 +46,12 @@ header {
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(15px);
     border-radius: 10px;
-
-
 }
 
 .navbar .logo a {
     font-size: 1.5rem;
     font-weight: bold;
+    color: #ffffff;
 }
 
 .navbar .links {
@@ -66,11 +65,20 @@ header {
 
 .navbar .toggle_btn {
     color: #ffffff;
-    font-size: 1.5rem;
+    font-size: 2rem;
     cursor: pointer;
     display: none;
 }
 
+.navbar .links a{
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.navbar .links a:hover{
+    color: #6441A4;
+    scale: 1.1;
+}
 
 .action_btn {
     background-color: #25252525;
@@ -79,37 +87,32 @@ header {
     font-size: 1rem;
     font-weight: bold;
     cursor: pointer;
-    transition: scale 0.2 ease;
 }
 
 .action_btn:hover {
     scale: 1.05;
     background-color: #6441A4;
-}
 
-.action_btn:active {
-    scale: 1.1;
 }
 
 /* DROPDOWN MENU */
 .dropdown_menu {
-    display: none;
+    display: flex;
     position: absolute;
     right: 2rem; /* Ajustar según sea necesario */
     top: 70px; /* Ajustar según sea necesario */
     height: 0;
     width: 300px;
     background: rgba(255, 255, 255, 0.2);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(100px);
     border-radius: 10px;
     overflow: hidden;
-    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 
 .dropdown_menu.open {
     height: min-content;
+    overflow: hidden;
 }
 
 .dropdown_menu li {
@@ -117,6 +120,18 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.dropdown_menu a{
+    color: #000000;
+}
+
+.dropdown_menu a:hover{
+    color: #ffffff;
+
+    transition: all ease 0.3s;
+    font-weight: bold;
+    cursor: pointer;
 
 }
 
