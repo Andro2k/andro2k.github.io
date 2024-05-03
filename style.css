@@ -9,8 +9,8 @@ body {
     height: 100%;
     background-color: #000;
     background-image: url('https://mfiles.alphacoders.com/101/1011817.png');
-    backdrop-filter: blur(5px);
-    background-position: top;
+    backdrop-filter: blur(50);
+    background-position:top;
 }
  
 li {
