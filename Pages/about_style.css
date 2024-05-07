@@ -1,32 +1,115 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: "Montserrat", sans-serif;
     box-sizing: border-box;
-    font-family: 'Open Sans', sans-serif;
 }
 
 body {
-    height: 100%;
-    background-color: #272727;
-    backdrop-filter: blur(50);
-    background-position: top;
-}
-
-.kodfun-galery{
-    display: flex;
-    height: 20rem;
-    gap: 1rem;
-}
-
-.kodfun-galery > div{
-    flex: 1;
-    border-bottom: 1rem;
+    background: #252525;
+    background-image: url('https://images8.alphacoders.com/133/1336966.jpeg');
     background-position: center;
-    background-repeat: no-repeat;
-    background-size: auto 100%;
+    background-size: auto;
     transition: all .8s cubic-bezier(.25, .4, .45, 1.4);
 }
 
-.kodfun-galery > div:hover{
-    flex: 5;
+.box {
+    width: 100%;
+    max-width: 500px;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 40px;
+    text-align: center;
+    margin: auto;
+    margin-top: 5%;
+    color: white;
+    font-family: 'Century Gothic', sans-serif;
+    box-shadow: 20px 20px 50px rgb(0, 0, 0, .25);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(8px);
 }
+
+.box-img {
+    border-radius: 100%;
+    width: 200px;
+    height: 200px;
+    background-size: cover;
+    background-color: #081015;
+    border: 6px solid rgb(0, 0, 0);
+    background-image: url('https://avatars.githubusercontent.com/u/108537136?v=4');
+    animation: borderAnimation 2s infinite alternate;
+}
+
+@keyframes borderAnimation {
+    0% {
+        border-color: #d54a16; /* Inicio: color rojo */
+    }
+    100% {
+        border-color: #081015; /* Final: color azul */
+    }
+}
+
+
+.box h1 {
+    font-size: 40px;
+    letter-spacing: 4px;
+    font-weight: 100;
+}
+
+.box h5 {
+    font-size: 15px;
+    letter-spacing: 3px;
+    font-weight: 100;
+    
+}
+
+.box p {
+    text-align: justify;
+    font-size: 18px;
+    margin-top: 10px; /* Añadir un espacio en la parte superior */
+    margin-bottom: 10px; /* Añadir un espacio en la parte inferior */
+}
+
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+.box li {
+    display: inline-block;
+    margin: auto  10px;
+    list-style: none;
+}
+
+.box li a {
+    color: white;
+    text-decoration: none;
+    font-size: 60px;
+    transition: all ease-in-out 250ms;
+}
+
+.box li a:hover {
+    color: #d54a16;
+}
+
+.btn {
+    border-radius: 9px;
+    color: #f9f3f4;
+    text-decoration: none;
+    text-align: center;
+    font-family: 'Century Gothic', sans-serif;
+    border: 3px solid;
+    padding: 7px 13px;
+    font-weight: bold;
+    max-width: 300px; /* Anchura máxima del botón */
+    margin: 20px auto; /* Margen superior e inferior de 20px y margen automático en los lados */
+    display: block; /* Convertir el botón en un elemento de bloque */
+    transition: background-color 0.3s ease; /* Transición para el cambio de color de fondo */
+}
+
+.btn:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Cambiar el color de fondo al pasar el mouse */
+    color: #2196f3; /* Cambiar el color del texto al pasar el mouse */
+}
+
+
