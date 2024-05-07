@@ -70,12 +70,12 @@ header {
     display: none;
 }
 
-.navbar .links a{
+.navbar .links a {
     color: #ffffff;
     font-weight: bold;
 }
 
-.navbar .links a:hover{
+.navbar .links a:hover {
     color: #6441A4;
     scale: 1.1;
 }
@@ -99,8 +99,10 @@ header {
 .dropdown_menu {
     display: flex;
     position: absolute;
-    right: 2rem; /* Ajustar según sea necesario */
-    top: 70px; /* Ajustar según sea necesario */
+    right: 2rem;
+    /* Ajustar según sea necesario */
+    top: 70px;
+    /* Ajustar según sea necesario */
     height: 0;
     width: 300px;
     background: rgba(255, 255, 255, 0.2);
@@ -122,11 +124,11 @@ header {
     align-items: center;
 }
 
-.dropdown_menu a{
+.dropdown_menu a {
     color: #000000;
 }
 
-.dropdown_menu a:hover{
+.dropdown_menu a:hover {
     color: #ffffff;
 
     transition: all ease 0.3s;
