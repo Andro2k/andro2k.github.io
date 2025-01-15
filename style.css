@@ -12,7 +12,7 @@
 
 :root {
   --text-color: #fff;
-  --main-color: #50ff50;
+  --main-color: #1acf6e;
   --secondary-color: #ffffff;
   --background-color: #000;
 }
@@ -37,12 +37,12 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 15px 100px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 10px 20px;
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.4);
 }
 
 .logo {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: bold;
   color: var(--text-color);
 }
@@ -51,13 +51,16 @@ header {
 }
 
 .navbar {
-  position: relative;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  padding: 15px 0;
 }
 .navbar a {
   font-size: 1rem;
-  padding: 10px 20px;
-  font-weight: 600;
+  padding: 10px auto;
+  font-weight: 500;
   color: var(--text-color);
   transition: all 0.5s ease;
 }
@@ -70,6 +73,8 @@ header {
   cursor: pointer;
   display: none;
 }
+
+
 
 /* Home Section */
 .home {
@@ -99,21 +104,23 @@ header {
 .home-text span {
   color: var(--main-color);
 }
-.btn {
+.home .btn {
   padding: 10px 20px;
   font-size: 1rem;
   color: var(--secondary-color);
-  background: var(--main-color);
-  border-radius: 5px;
+  background: #FFFFFF30;
+  box-shadow:0 0px 50px;
+  border-radius: 25px;
   transition: background 0.3s;
 }
-.btn:hover {
-  background: #76a629;
+.home .btn:hover {
+  background: var(--main-color);
+  color: #000;
 }
 
 /* About Section */
 .about {
-  display: grid;
+  display: flex;
   grid-template-columns: repeat(1, 1fr);
   gap: 1rem;
 }
@@ -123,7 +130,7 @@ header {
   object-fit: contain;
 }
 .about-text span {
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 500;
   text-transform: uppercase;
   color: var(--main-color);
@@ -134,6 +141,15 @@ header {
   text-align: justify;
 }
 
+.about-text .btn {
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: var(--secondary-color);
+  background: var(--main-color);
+  box-shadow:0 0px 50px;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
 /* Social Section */
 .social {
   text-align: center;
@@ -192,10 +208,10 @@ header {
 }
 
 .social-icon.twitter {
-  background: #1da1f2; /* Celeste de Twitter */
+  background: #15202b; /* Celeste de Twitter */
 }
 .social-icon.twitter:hover {
-  background: #1a91da;
+  background: #3a5877;
   box-shadow: 0px 0px 20px #1da1f2;
 }
 
@@ -218,6 +234,34 @@ header {
 .social-icon.discord:hover {
   background: #404eed;
   box-shadow: 0px 0px 20px #5865f2;
+}
+
+.social-icon.kofi {
+  background: #FF6433; /* Azul de Ko-Fi */
+}
+.social-icon.kofi:hover {
+  background: #FFA05A;
+  box-shadow: 0px 0px 20px #FF6433;
+}
+
+.social-icon.tiktok {
+  background: linear-gradient(
+    45deg,
+    #25f4ee, /* Azul claro */
+    #fe2c55  /* Rojo TikTok */
+  );
+}
+.social-icon.tiktok:hover {
+  filter: brightness(1.2);
+  box-shadow: 0px 0px 20px rgba(255, 45, 85, 0.7); /* Sombra roja */
+}
+
+.social-icon.spotify {
+  background: #1ed760;
+}
+.social-icon.spotify:hover {
+  background: #159a44;
+  box-shadow: 0px 0px 20px #1ed760;
 }
 
 /* Highlights Section */
