@@ -1,112 +1,118 @@
-<!DOCTYPE html>
 <html lang="es">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
-        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Principal page</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stream Page | The Andro</title>
+  <link rel="stylesheet" href="style.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
-
 <body>
+    <!-- Header -->
     <header>
-        <div class="navbar">
-            <div class="logo"><a href="">¡Bienvenido a la comunidad</a></div>
-            <ul class="links">
-                <li><a href="">Inicio</a></li>
-                <li><a href="">Proyectos</a></li>
-                <li><a href="">Redes</a></li>
-                <li><a href="Pages/about.html">Acerca</a></li>
-            </ul>
-            <a href="https://www.twitch.tv/theandro_2k" class="action_btn">Vamos a Twitch</a>
-            <div class="toggle_btn">
-                <i class="fas fa-bars"></i>
-            </div>
-        </div>
-        <div class="dropdown_menu">
-            <ul>
-                <li><a href="">Inicio</a></li>
-                <li><a href="">Proyectos</a></li>
-                <li><a href="">Redes</a></li>
-                <li><a href="Pages/about.html">Acerca</a></li>
-            </ul>
-            <a href="https://www.twitch.tv/theandro_2k" class="action_btn">Vamos a Twitch</a>
-        </div>
+        <a href="#" class="logo">The <span>Andro</span></a>
+        <i class='bx bx-menu' id="menu-icon"></i>
+        
+        <ul class="navbar">
+            <li><a href="#home">Inicio</a></li>
+            <li><a href="#about">Sobre mí</a></li>
+            <li><a href="#social">Redes</a></li>
+            <li><a href="#highlights">Destacados</a></li>
+        </ul>
     </header>
-    <main>
-        <section id="contenido">
-            <h1>The Andro 2K</h1>
-            <div class="container">
-                <p>
-                    ¡Explora el mundo del streaming y el apasionante universo
-                    de la programación y las redes en un solo lugar! En Nombre de la Página,
-                    fusionamos la emoción del entretenimiento en línea con el conocimiento técnico
-                    de la informática para brindarte una experiencia única.
-                </p>
-                <br>
-                <h2>Aprende y Domina</h2>
-                <p>
-                    Además de disfrutar del entretenimiento sin límites, también te ofrecemos la
-                    oportunidad de expandir tus horizontes intelectuales. Con nuestro extenso
-                    catálogo de cursos y tutoriales, podrás sumergirte en el fascinante mundo de
-                    la programación y las redes.
-                </p>
-                <br>
-                <h2>Comunidad Vibrante</h2>
-                <p>
-                    Únete a una comunidad del streaming y la tecnología. Interactúa con otros usuarios,
-                    comparte tus experiencias, haz preguntas y colabora en proyectos, creemos en el poder de la
-                    comunidad para inspirar, educar y hacer avanzar
-                    el conocimiento colectivo.
-                </p>
-                <br>
-                <h2>Descubre, Aprende, Disfruta</h2>
-                <p>Ya sea que estés buscando tu próxima película para ver, deseando mejorar tus habilidades
-                    de codificación o buscando consejos para optimizar tu red doméstica, Nombre de la
-                    Página es tu destino definitivo.</p>
+
+    <!-- Inicio -->
+    <section class="home" id="home">
+        <div class="home-text">
+            <h1>¡Bienvenidos al <span>Stream</span>!</h1>
+            <p>Juegos, diversión y comunidad. <br> Únete a la aventura en directo.</p>
+            <a href="#social" class="btn">Sigue mis redes</a>
+        </div>
+    </section>
+
+    <!-- Sobre mí -->
+    <section class="about" id="about">
+    <div class="about-img">
+        <!-- Aquí se incrusta el reproductor del canal de Twitch -->
+        <iframe 
+            src="https://kick.com/theandro2k"
+            frameborder="0" 
+            allowfullscreen="true" 
+            scrolling="no" 
+            height="300" 
+            width="100%">
+        </iframe>
+    </div>
+  
+    <div class="about-text">
+        <span>Sobre mí</span>
+        <h2>Conoce al streamer</h2>
+        <p>¡Hola! Soy The Andro, un apasionado de los videojuegos y la creación de contenido. Me encanta interactuar con la comunidad, compartir risas, y disfrutar de partidas épicas.</p>
+        <p>Desde FPS hasta juegos de aventura, siempre encontrarás algo emocionante aquí. ¡Bienvenido a mi rincón del streaming!</p>
+        <a href="#highlights" class="btn">Ver destacados</a>
+    </div>
+</section>
+
+    <!-- Redes Sociales -->
+    <section class="social" id="social">
+        <div class="heading">
+            <span>Conéctate</span>
+            <h2>Mis Redes Sociales</h2>
+        </div>
+        <div class="social-container">
+          <a href="https://twitch.tv" target="_blank" class="social-icon twitch"><i class='bx bxl-twitch'></i> Twitch</a>
+          <a href="https://kick.com" target="_blank" class="social-icon kick"><i class="fab fa-kickstarter"></i> Kick</a>
+          <a href="https://youtube.com" target="_blank" class="social-icon youtube"><i class='bx bxl-youtube'></i> YouTube</a>
+          <a href="https://twitter.com" target="_blank" class="social-icon twitter"><i class='bx bxl-twitter'></i> Twitter</a>
+          <a href="https://instagram.com" target="_blank" class="social-icon instagram"><i class='bx bxl-instagram'></i> Instagram</a>
+          <a href="https://discord.com" target="_blank" class="social-icon discord"><i class='bx bxl-discord'></i> Discord</a>
+        </div>
+    </section>
+
+    <!-- Destacados -->
+    <section class="highlights" id="highlights">
+        <div class="heading">
+            <span>Clips</span>
+            <h2>Momentos Destacados</h2>
+        </div>
+        <div class="highlights-container">
+            <div class="clip">
+                <iframe src="https://beta.decapi.me/youtube/latest_video?id=UCseLh6Y64DSPvtq8-s5a0EA" title="Ultimo Video"></iframe>
+                <h3>Ultimo Video de Youtube</h3>
             </div>
-        </section>
-        <section class="cards">
-            <a href="https://www.twitch.tv/theandro_2k" class="card twitch-card">
-                <i class="fab fa-twitch"></i>
-                <h2>Twitch</h2>
-                <p>Ven a ver los directos!</p>
-            </a>
-            <a href="https://discord.com/invite/q6ntBg3Ebv" class="card discord-card">
-                <i class="fab fa-discord"></i>
-                <h2>Discord</h2>
-                <p>Unete a la comunidad!</p>
-            </a>
-            <a href="https://www.instagram.com/theandro2k/" class="card instagram-card">
-                <i class="fab fa-instagram"></i>
-                <h2>Instagram</h2>
-                <p>Mira mis historias</p>
-            </a>
-            <a href="https://www.youtube.com/channel/UCseLh6Y64DSPvtq8-s5a0EA" class="card youtube-card">
-                <i class="fab fa-youtube"></i>
-                <h2>Youtube</h2>
-                <p>Conoce mas de mi contenido</p>
-            </a>
-        </section>
-    </main>
-    <footer>
-        <p class="copyright-text">© 2024 Tu Empresa. Todos los derechos reservados.</p>
-    </footer>
-    <script>
-        const toggleBtn = document.querySelector('.toggle_btn');
-        const toggleBtnIcon = document.querySelector('.toggle_btn i');
-        const dropDownMenu = document.querySelector('.dropdown_menu');
+        </div>
+    </section>
 
-        toggleBtn.onclick = function () {
-            dropDownMenu.classList.toggle('open');
-            const isOpen = dropDownMenu.classList.contains('open');
-            toggleBtnIcon.classList = isOpen ? 'fas fa-times' : 'fas fa-bars';
-        }
-    </script>
+    <!-- Footer -->
+    <section class="footer" id="footer">
+        <div class="footer-box">
+            <h2>The <span>Andro</span></h2>
+            <p>Gracias por ser parte de esta increíble comunidad. ¡Nos vemos en directo! 🎮</p>
+            <div class="social">
+                <a href="#"><i class='bx bxl-facebook'></i></a>
+                <a href="#"><i class='bx bxl-twitter'></i></a>
+                <a href="#"><i class='bx bxl-instagram'></i></a>
+            </div>
+        </div>
+
+        <div class="footer-box">
+            <h3>Redes</h3>
+            <li><a href="#">Twitch</a></li>
+            <li><a href="#">YouTube</a></li>
+            <li><a href="#">Discord</a></li>
+        </div>
+
+        <div class="footer-box">
+            <h3>Contacto</h3>
+            <span>Ecuador</span>
+            <span>streamer@theandro.com</span>
+        </div>
+    </section>
+
+    <div class="copyright">
+        <p>&#169; The Andro. Todos los derechos reservados.</p>
+    </div>
+
+    <script src="main.js"></script>
 </body>
-
 </html>
