@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,102 +10,104 @@
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
+
 <body>
-    <!-- Header -->
-    <header>
-      <a href="#" class="logo">The <span>Andro</span></a>    
-      <ul class="navbar">
+  <!-- Header -->
+  <header>
+    <a href="#" class="logo">The <span>Andro</span></a>
+    <ul class="navbar">
+      <li><a href="#home">Inicio</a></li>
+      <li><a href="#about">Sobre mí</a></li>
+      <li><a href="#social">Redes</a></li>
+      <li><a href="#highlights">Destacados</a></li>
+    </ul>
+    <div class="nav-mobile">
+      <i class='bx bx-menu' id="mobile-menu-icon"></i>
+      <ul class="mobile-navbar" id="mobile-navbar">
         <li><a href="#home">Inicio</a></li>
         <li><a href="#about">Sobre mí</a></li>
         <li><a href="#social">Redes</a></li>
         <li><a href="#highlights">Destacados</a></li>
+        <li><a href="#footer">Contacto</a></li>
       </ul>
-      <div class="nav-mobile">
-        <i class='bx bx-menu' id="mobile-menu-icon"></i>
-        <ul class="mobile-navbar" id="mobile-navbar">
-          <li><a href="#home">Inicio</a></li>
-          <li><a href="#about">Sobre mí</a></li>
-          <li><a href="#social">Redes</a></li>
-          <li><a href="#highlights">Destacados</a></li>
-          <li><a href="#footer">Contacto</a></li>
-        </ul>
-      </div>
-    </header>
-  
-    <!-- Inicio -->
-    <section class="home" id="home">
-        <div class="home-text">
-            <h1>¡Bienvenidos al <span>Stream</span>!</h1>
-            <p>Juegos, diversión y comunidad. <br> Únete a la aventura en directo.</p>
-            <a href="#social" class="btn">Sigueme en mis redes</a>
-        </div>
-    </section>
+    </div>
+  </header>
 
-    <!-- Sobre mí -->
-    <section class="about" id="about">
+  <!-- Inicio -->
+  <section class="home" id="home">
+    <div class="home-text">
+      <h1>¡Bienvenidos al <span>Stream</span>!</h1>
+      <p>Juegos, diversión y comunidad. <br> Únete a la aventura en directo.</p>
+      <a href="#social" class="btn">Sigueme en mis redes</a>
+    </div>
+  </section>
+
+  <!-- Sobre mí -->
+  <section class="about" id="about">
     <div class="about-img">
-            <img src="https://i.postimg.cc/285BpT07/logo.png" alt="image">
+      <img src="https://i.postimg.cc/285BpT07/logo.png" alt="image">
     </div>
     <div class="about-text">
-        <span>Sobre mí</span>
-        <h2>Conoce al streamer</h2>
-        <p>¡Hola! Soy The Andro, un apasionado de los videojuegos y la creación de contenido. Me encanta interactuar con la comunidad, compartir risas, y disfrutar de partidas épicas.</p>
-        <p>Desde FPS hasta juegos de aventura, siempre encontrarás algo emocionante aquí. ¡Bienvenido a mi rincón del streaming!</p>
-        <a href="#highlights" class="btn">Ver destacados</a>
+      <span>Sobre mí</span>
+      <h2>Conoce al streamer</h2>
+      <p>¡Hola! Soy The Andro, un apasionado de los videojuegos y la creación de contenido. Me encanta interactuar con la comunidad, compartir risas, y disfrutar de partidas épicas.</p>
+      <p>Desde FPS hasta juegos de aventura, siempre encontrarás algo emocionante aquí. ¡Bienvenido a mi rincón del streaming!</p>
+      <a href="#highlights" class="btn">Ver destacados</a>
     </div>
-</section>
+  </section>
 
-    <!-- Redes Sociales -->
-    <section class="social" id="social">
-        <div class="heading">
-            <span>Conéctate</span>
-            <h2>Mis Redes Sociales</h2>
-        </div>
-        <div class="social-container">
-          <a href="https://www.twitch.tv/theandro_2k" target="_blank" class="social-icon twitch"><i class='bx bxl-twitch'></i> Twitch</a>
-          <a href="https://kick.com/theandro2k" target="_blank" class="social-icon kick"><i class="fab fa-kickstarter"></i> Kick</a>
-          <a href="https://www.youtube.com/@TheAndro2k" target="_blank" class="social-icon youtube"><i class='bx bxl-youtube'></i> YouTube</a>
-          <a href="https://x.com/TheAndro2K" target="_blank" class="social-icon twitter"><i class='fab fa-x'></i> Twitter</a>
-          <a href="https://www.instagram.com/theandro2k/" target="_blank" class="social-icon instagram"><i class='bx bxl-instagram'></i> Instagram</a>
-          <a href="https://discord.gg/q6ntBg3Ebv" target="_blank" class="social-icon discord"><i class='bx bxl-discord'></i> Discord</a>
-          <a href="https://ko-fi.com/andro2k" target="_blank" class="social-icon kofi"><i class="fa-solid fa-mug-saucer"></i>Ko-Fi</a>
-          <a href="https://www.tiktok.com/@theandro2k" target="_blank" class="social-icon tiktok"><i class="fab fa-tiktok"></i> TikTok</a>
-          <a href="https://open.spotify.com/user/32v5h6tx00t93aw66wbyfxbg2?si=2407f395e26445b9&nd=1&dlsi=faf49b839f5a46fc" target="_blank" class="social-icon spotify"><i class='bx bxl-spotify'></i> Spotify</a>
-        </div>
-    </section>
-
-    <!-- Destacados -->
-    <section class="highlights" id="highlights">
-        <div class="heading">
-            <span>Clips</span>
-            <h2>Momentos Destacados</h2>
-        </div>
-        <div class="highlights-container">
-            <div class="clip">
-              <iframe width="560" height="315" src="https://www.youtube.com/embed/wNOiVLCM1aA?si=qvOUHfaRvzIfiKTT"title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-              </iframe>
-                <h3>Ultimo Video de Youtube</h3>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <section class="footer" id="footer">
-        <div class="footer-box">
-            <h2>The <span>Andro</span></h2>
-            <p>Gracias por ser parte de esta increíble comunidad. ¡Nos vemos en directo! 🎮</p>
-            <div class="social">
-              <a href="https://www.twitch.tv/theandro_2k" target="_blank" class="social twitch"><i class='bx bxl-twitch'></i> Twitch</a>
-              <a href="https://kick.com/theandro2k" target="_blank" class="social kick"><i class="fab fa-kickstarter"></i> Kick</a>
-              <a href="https://www.youtube.com/@TheAndro2k" target="_blank" class="social youtube"><i class='bx bxl-youtube'></i> YouTube</a>
-            </div>
-        </div>
-    </section>
-
-    <div class="copyright">
-        <p>&#169; The Andro. Todos los derechos reservados.</p>
+  <!-- Redes Sociales -->
+  <section class="social" id="social">
+    <div class="heading">
+      <span>Conéctate</span>
+      <h2>Mis Redes Sociales</h2>
     </div>
+    <div class="social-container">
+      <a href="https://www.twitch.tv/theandro_2k" target="_blank" class="social-icon twitch"><i class='bx bxl-twitch'></i> Twitch</a>
+      <a href="https://kick.com/theandro2k" target="_blank" class="social-icon kick"><i class="fab fa-kickstarter"></i> Kick</a>
+      <a href="https://www.youtube.com/@TheAndro2k" target="_blank" class="social-icon youtube"><i class='bx bxl-youtube'></i> YouTube</a>
+      <a href="https://x.com/TheAndro2K" target="_blank" class="social-icon twitter"><i class='fab fa-x'></i> Twitter</a>
+      <a href="https://www.instagram.com/theandro2k/" target="_blank" class="social-icon instagram"><i class='bx bxl-instagram'></i> Instagram</a>
+      <a href="https://discord.gg/q6ntBg3Ebv" target="_blank" class="social-icon discord"><i class='bx bxl-discord'></i> Discord</a>
+      <a href="https://ko-fi.com/andro2k" target="_blank" class="social-icon kofi"><i class="fa-solid fa-mug-saucer"></i>Ko-Fi</a>
+      <a href="https://www.tiktok.com/@theandro2k" target="_blank" class="social-icon tiktok"><i class="fab fa-tiktok"></i> TikTok</a>
+      <a href="https://open.spotify.com/user/32v5h6tx00t93aw66wbyfxbg2?si=2407f395e26445b9&nd=1&dlsi=faf49b839f5a46fc" target="_blank" class="social-icon spotify"><i class='bx bxl-spotify'></i> Spotify</a>
+    </div>
+  </section>
 
-    <script src="main.js"></script>
+  <!-- Destacados -->
+  <section class="highlights" id="highlights">
+    <div class="heading">
+      <span>Clips</span>
+      <h2>Momentos Destacados</h2>
+    </div>
+    <div class="highlights-container">
+      <div class="clip">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/wNOiVLCM1aA?si=qvOUHfaRvzIfiKTT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+        </iframe>
+        <h3>Ultimo Video de Youtube</h3>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <section class="footer" id="footer">
+    <div class="footer-box">
+      <h2>The <span>Andro</span></h2>
+      <p>Gracias por ser parte de esta increíble comunidad. ¡Nos vemos en directo! 🎮</p>
+      <div class="social">
+        <a href="https://www.twitch.tv/theandro_2k" target="_blank" class="social twitch"><i class='bx bxl-twitch'></i> Twitch</a>
+        <a href="https://kick.com/theandro2k" target="_blank" class="social kick"><i class="fab fa-kickstarter"></i> Kick</a>
+        <a href="https://www.youtube.com/@TheAndro2k" target="_blank" class="social youtube"><i class='bx bxl-youtube'></i> YouTube</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="copyright">
+    <p>&#169; The Andro. Todos los derechos reservados.</p>
+  </div>
+
+  <script src="main.js"></script>
 </body>
+
 </html>
