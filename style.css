@@ -12,13 +12,42 @@
 
 :root {
   --text-color: #fff;
+  --dark-text: #;
   --main-color: #1acf6e;
-  --secondary-color: #ffffff;
+  --secondary-color: #777;
   --background-color: #000;
+  --background-gradient:
+    radial-gradient(
+      73% 101% at 95.54% 95.05%,
+      rgba(255, 156, 65, 0.78) 0%,
+      rgba(255, 168, 88, 0) 100%
+    ),
+    linear-gradient(
+      197deg,
+      rgba(255, 240, 164, 1) 0%,
+      rgba(255, 240, 164, 0) 100%
+    ),
+    radial-gradient(
+      59% 74% at 10% -10%,
+      rgba(49, 132, 255, 0.8) 0%,
+      rgba(56, 75, 246, 0.21) 52%,
+      rgba(62, 246, 246, 0) 100%
+    ),
+    linear-gradient(
+      143deg,
+      rgba(62, 158, 246, 1) 0%,
+      rgba(238, 43, 183, 0.33) 30%,
+      rgba(246, 62, 106, 0) 56%
+    ),
+    linear-gradient(
+      288deg,
+      rgba(217, 155, 255, 1) 33%,
+      rgba(217, 170, 221, 0) 97%
+    );
 }
 
 body {
-  background-color: var(--background-color);
+  background: var(--background-color);
   color: var(--text-color);
 }
 
@@ -150,6 +179,7 @@ header {
   background-position: right;
   background-attachment: fixed;
   display: flex;
+  border-radius: 16px;
   align-items: center;
   justify-content: center;
   text-align: center;
@@ -157,12 +187,12 @@ header {
 
 .home-text h1 {
   font-size: 3.5rem;
-  color: var(--secondary-color);
+  color: var(--text-color);
 }
 .home-text p {
   margin: 1.5rem 0;
-  font-size: 1rem;
-  color: var(--secondary-color);
+  font-size: 1.5rem;
+  color: var(--text-color);
 }
 .home-text span {
   color: var(--main-color);
@@ -170,15 +200,15 @@ header {
 .home .btn {
   padding: 10px 20px;
   font-size: 1rem;
-  color: var(--secondary-color);
+  color: var(--main-color);
   background: #ffffff30;
-  box-shadow: 0 0px 50px;
-  border-radius: 25px;
-  transition: background 0.3s;
+  box-shadow: 2px 2px 50px;
+  border-radius: 10px;
+  transition: background 0.8s;
 }
 .home .btn:hover {
   background: var(--main-color);
-  color: #000;
+  color: var(--background-color);;
 }
 
 /* About Section */
@@ -188,7 +218,7 @@ header {
   gap: 1rem;
 }
 .about-img img {
-  width: 100%;
+  width: 70%;
   border-radius: 50%;
   object-fit: contain;
 }
@@ -213,6 +243,55 @@ header {
   border-radius: 5px;
   transition: background 0.3s;
 }
+
+/* OBS Streamer */
+.obs-streamer {
+  padding: 60px 20px;
+  text-align: center;
+  background:var(--background-gradient);
+  border-radius: 16px;
+  margin: 10px;
+}
+
+.obs-streamer .heading span {
+  color: #ff5733;
+  font-weight: bold;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+}
+
+.obs-streamer .heading h2 {
+  font-size: 2rem;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.obs-content p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+.obs-btn {
+  display: inline-block;
+  font-weight: bold;
+  align-items: center;
+  padding: 20px 20px;
+  font-size: 1.25rem;
+  color: var(--text-color);
+  background: #1f323b;
+  border-radius: 10px;
+  transition: background 0.3s, transform 0.3s;
+  text-decoration: none;
+}
+
+.obs-btn:hover {
+  transform: scale(1.2);
+  background-color: #e74c3c;
+}
+
+
 /* Social Section */
 .social {
   text-align: center;
@@ -222,23 +301,22 @@ header {
   grid-template-columns: repeat(auto-fit, minmax(150px, auto));
   align-items: stretch;
   justify-items: stretch;
-  gap: 1rem;
-  margin-top: 2rem;
+  gap: 0.5rem;
+  margin: 0.5rem;
 }
 
 .social-icon {
   display: flex;
-  align-items: center;
-  padding: 20px 20px;
-  font-size: 1.25rem;
-  color: var(--text-color);
   background: var(--main-color);
-  border-radius: 5px;
+  align-items: center;
+  padding: 20px;
+  font-size: 1.4rem;
+  color: var(--text-color);
+  border-radius: 10px;
   transition: background 0.3s, transform 0.3s;
-  text-decoration: none;
 }
 .social-icon i {
-  margin-right: 10px;
+  margin-right: 1rem;
 }
 
 .social-icon:hover {
@@ -311,7 +389,7 @@ header {
   background: linear-gradient(
     45deg,
     #25f4ee,
-    /* Azul claro */ #fe2c55 /* Rojo TikTok */
+    #fe2c55
   );
 }
 .social-icon.tiktok:hover {
@@ -334,16 +412,18 @@ header {
 .highlights-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  margin-top: 2rem;
+  align-items: stretch;
+  justify-items: stretch;
+  gap: 0.5rem;
+  margin: 0.5rem;
 }
 .highlights .clip iframe {
   width: 100%;
-  border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  box-shadow: 0px 0px 25px #ff0000;
 }
 .highlights .clip h3 {
-  margin-top: 0.5rem;
+  margin: 1rem;
   font-size: 1rem;
   color: var(--text-color);
 }
@@ -354,7 +434,6 @@ header {
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1rem;
   padding: 20px 10%;
-  background: var(--background-color);
 }
 .footer-box {
   text-align: center;
@@ -378,6 +457,7 @@ header {
 }
 
 .copyright {
+  background: var(--background-color);
   text-align: center;
-  font-family: "Arial";
+  color: var(--secondary-color);
 }
