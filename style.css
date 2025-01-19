@@ -211,6 +211,77 @@ header {
   color: var(--background-color);;
 }
 
+/* Stream Kick Section */
+.kick-stream-chat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 40px 20px;
+  background: linear-gradient(120deg, #1e1e1e, #383838);
+  color: #fff;
+  text-align: center;
+  border-radius: 16px;
+  margin: 10px;
+}
+
+.kick-stream-chat .heading span {
+  font-size: 18px;
+  color: var(--main-color); /* Verde Kick */
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.kick-stream-chat .heading h2 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+.stream-chat-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr; /* Stream ocupa 2 partes, chat 1 */
+  gap: 20px;
+  width: 100%;
+}
+
+.stream {
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0 0px 10px #00FF00;
+}
+
+.stream iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.chat {
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0 0px 10px #00FF00;
+}
+
+.chat iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 1050px) {
+  .stream-chat-container {
+    grid-template-columns: 1fr; /* Una sola columna */
+  }
+
+  .stream, .chat {
+    aspect-ratio: unset;
+    height: 400px;
+  }
+}
+
 /* About Section */
 .about {
   display: flex;
