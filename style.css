@@ -274,11 +274,18 @@ header {
 @media (max-width: 1050px) {
   .stream-chat-container {
     grid-template-columns: 1fr; /* Una sola columna */
+    gap: 2px;
   }
 
   .stream, .chat {
     aspect-ratio: unset;
-    height: 400px;
+    height: 500px;
+  }
+  .stream{
+    border-radius: 16px 16px 0px 0px;
+  }
+  .chat {
+    border-radius: 0px 0px 16px 16px;
   }
 }
 
