@@ -498,6 +498,7 @@ header {
 .highlights .clip iframe {
   width: 100%;
   border-radius: 16px;
+  height:40rem;
   box-shadow: 0px 0px 25px #ff0000;
 }
 .highlights .clip h3 {
