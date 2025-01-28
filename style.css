@@ -10,6 +10,21 @@
   font-family: "VT323", serif;
 }
 
+/* Personalización del scrollbar */
+::-webkit-scrollbar {
+  width: 10px; /* Ancho del scroll */
+}
+
+::-webkit-scrollbar-track {
+  background: #222; /* Fondo del track */
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--main-color);
+  border-radius: 6px;
+}
+
 :root {
   --text-color: #fff;
   --dark-text: #;
@@ -87,7 +102,7 @@ header {
   padding: 15px 0;
 }
 .navbar a {
-  font-size: 1rem;
+  font-size: 1.5rem;
   padding: 10px auto;
   font-weight: 500;
   color: var(--text-color);
@@ -133,7 +148,7 @@ header {
 
 /* Icono de menú móvil */
 .nav-mobile i {
-  font-size: 24px;
+  font-size: 1.5rem;
   cursor: pointer;
   color: var(--text-color); /* Ajusta según tu diseño */
 }
@@ -172,18 +187,15 @@ header {
 .home {
   width: 100%;
   height: 100vh;
-  background: url("https://i.postimg.cc/c4ztd0nD/1354305.jpg") no-repeat center
-    center/cover;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: right;
-  background-attachment: fixed;
+  background: url("https://i.postimg.cc/c4ztd0nD/1354305.jpg") no-repeat center center / cover;
+  background-attachment: fixed; /* Mantiene el fondo fijo al hacer scroll */
   display: flex;
-  border-radius: 16px;
   align-items: center;
   justify-content: center;
   text-align: center;
+  border-radius: 16px;
 }
+
 
 .home-text h1 {
   font-size: 3.5rem;
@@ -296,18 +308,20 @@ header {
   gap: 1rem;
 }
 .about-img img {
-  width: 70%;
+  width: 100%;
   border-radius: 50%;
-  object-fit: contain;
 }
 .about-text span {
-  font-size: 18px;
-  font-weight: 500;
+  font-size: 1.5rem;
   text-transform: uppercase;
   color: var(--main-color);
 }
+.about-text h2 {
+  font-size: 2rem;
+  text-transform: uppercase;
+}
 .about-text p {
-  font-size: 0.938rem;
+  font-size: 1.5rem;
   margin: 0.5rem 0 1.4rem;
   text-align: justify;
 }
@@ -322,6 +336,11 @@ header {
   transition: background 0.3s;
 }
 
+.about-text .btn:hover {
+  background: var(--secondary-color); /* Intercambia colores al pasar el mouse */
+  color: var(--main-color); /* Hace que el texto cambie de color */
+  transform: scale(1.05); /* Animación sutil al pasar el mouse */
+}
 /* OBS Streamer */
 .obs-streamer {
   padding: 60px 20px;
@@ -376,110 +395,107 @@ header {
 }
 .social-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, auto));
+  margin-top: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, auto));
   align-items: stretch;
   justify-items: stretch;
-  gap: 0.5rem;
-  margin: 0.5rem;
+  gap: 1.5rem;
 }
 
 .social-icon {
   display: flex;
-  background: var(--main-color);
   align-items: center;
   padding: 20px;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   color: var(--text-color);
-  border-radius: 10px;
-  transition: background 0.3s, transform 0.3s;
+  border-radius: 16px;
+  transition: background 0.2s, transform 0.5s;
 }
 .social-icon i {
-  margin-right: 1rem;
+  margin-right: 1.5rem;
+  transform: scale(1.5);
 }
 
 .social-icon:hover {
-  transform: scale(1.07);
+  transform: scale(1.05);
 }
 
 /* Colores específicos para cada plataforma */
 .social-icon.twitch {
-  background: #9146ff; /* Color púrpura de Twitch */
+  box-shadow: 0px 0px 8px #9146ff; /* Color púrpura de Twitch */
 }
 .social-icon.twitch:hover {
-  background: #772ce8;
+  background: #9146ff;
   box-shadow: 0px 0px 20px #9146ff;
 }
 
 .social-icon.kick {
-  background: #50ff50; /* Color púrpura de kick */
+  box-shadow: 0px 0px 8px #50ff50; /* Color verde de Kick */
 }
 .social-icon.kick:hover {
-  background: #00ff00;
+  background: #50ff50;
+  color: #000;
   box-shadow: 0px 0px 20px #50ff50;
 }
 
 .social-icon.youtube {
-  background: #ff0000; /* Rojo de YouTube */
+  box-shadow: 0px 0px 8px #ff0000; /* Rojo de YouTube */
 }
 .social-icon.youtube:hover {
-  background: #cc0000;
+  background: #ff0000;
   box-shadow: 0px 0px 20px #ff0000;
 }
 
 .social-icon.twitter {
-  background: #15202b; /* Celeste de Twitter */
+  box-shadow: 0px 0px 8px #1da1f2; /* Azul de Twitter */
 }
 .social-icon.twitter:hover {
-  background: #3a5877;
+  background: #1da1f2;
+  color: #000;
   box-shadow: 0px 0px 20px #1da1f2;
 }
 
 .social-icon.instagram {
-  background: linear-gradient(
-    45deg,
-    #f58529,
-    #dd2a7b,
-    #8134af
-  ); /* Gradiente de Instagram */
+  box-shadow: 0px 0px 8px #dd2a7b; /* Gradiente principal de Instagram */
 }
 .social-icon.instagram:hover {
+  background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af);
   filter: brightness(1.2);
-  box-shadow: 0px 0px 20px brightness(1.8);
+  box-shadow: 0px 0px 20px #dd2a7b;
 }
 
 .social-icon.discord {
-  background: #5865f2; /* Azul de Discord */
+  box-shadow: 0px 0px 8px #5865f2; /* Azul de Discord */
 }
 .social-icon.discord:hover {
-  background: #404eed;
+  background: #5865f2;
   box-shadow: 0px 0px 20px #5865f2;
 }
 
 .social-icon.kofi {
-  background: #ff6433; /* Azul de Ko-Fi */
+  box-shadow: 0px 0px 8px #ff6433; /* Naranja de Ko-Fi */
 }
 .social-icon.kofi:hover {
-  background: #ffa05a;
+  background: #ff6433;
   box-shadow: 0px 0px 20px #ff6433;
 }
 
 .social-icon.tiktok {
-  background: linear-gradient(
-    45deg,
-    #25f4ee,
-    #fe2c55
-  );
+  box-shadow: 0px 0px 8px #fe2c55; /* Gradiente principal de TikTok */
 }
 .social-icon.tiktok:hover {
+  background: linear-gradient(45deg, #25f4ee, #fe2c55);
   filter: brightness(1.2);
-  box-shadow: 0px 0px 20px rgba(255, 45, 85, 0.7); /* Sombra roja */
+  color: #000;
+  box-shadow: 0px 0px 20px rgba(255, 45, 85, 0.7);
 }
 
 .social-icon.spotify {
-  background: #1ed760;
+  box-shadow: 0px 0px 8px #1ed760; /* Verde de Spotify */
 }
 .social-icon.spotify:hover {
-  background: #159a44;
+  background: #1ed760;
+  color: #000;
   box-shadow: 0px 0px 20px #1ed760;
 }
 
@@ -489,22 +505,22 @@ header {
 }
 .highlights-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
   align-items: stretch;
   justify-items: stretch;
   gap: 0.5rem;
   margin: 0.5rem;
+}
+.highlights .clip h3 {
+  margin: 1rem;
+  font-size: 2rem;
+  color: var(--text-color);
 }
 .highlights .clip iframe {
   width: 100%;
   border-radius: 16px;
   height:40rem;
   box-shadow: 0px 0px 25px #ff0000;
-}
-.highlights .clip h3 {
-  margin: 1rem;
-  font-size: 1rem;
-  color: var(--text-color);
 }
 
 /* Footer Section */
