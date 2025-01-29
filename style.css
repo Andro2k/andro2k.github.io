@@ -7,12 +7,18 @@
   scroll-behavior: smooth;
   list-style: none;
   text-decoration: none;
-  font-family: "VT323", serif;
+  font-family: "VT323", monospace;
+}
+
+/* Evita el scroll horizontal */
+html, body {
+  overflow-x: hidden;
 }
 
 /* Personalización del scrollbar */
 ::-webkit-scrollbar {
   width: 10px; /* Ancho del scroll */
+  max-height: 100px;
 }
 
 ::-webkit-scrollbar-track {
@@ -27,38 +33,16 @@
 
 :root {
   --text-color: #fff;
-  --dark-text: #;
+  --dark-text: #333; /* Corregido */
   --main-color: #1acf6e;
   --secondary-color: #777;
   --background-color: #000;
   --background-gradient:
-    radial-gradient(
-      73% 101% at 95.54% 95.05%,
-      rgba(255, 156, 65, 0.78) 0%,
-      rgba(255, 168, 88, 0) 100%
-    ),
-    linear-gradient(
-      197deg,
-      rgba(255, 240, 164, 1) 0%,
-      rgba(255, 240, 164, 0) 100%
-    ),
-    radial-gradient(
-      59% 74% at 10% -10%,
-      rgba(49, 132, 255, 0.8) 0%,
-      rgba(56, 75, 246, 0.21) 52%,
-      rgba(62, 246, 246, 0) 100%
-    ),
-    linear-gradient(
-      143deg,
-      rgba(62, 158, 246, 1) 0%,
-      rgba(238, 43, 183, 0.33) 30%,
-      rgba(246, 62, 106, 0) 56%
-    ),
-    linear-gradient(
-      288deg,
-      rgba(217, 155, 255, 1) 33%,
-      rgba(217, 170, 221, 0) 97%
-    );
+    radial-gradient(73% 101% at 95.54% 95.05%, rgba(255, 156, 65, 0.78) 0%, rgba(255, 168, 88, 0) 100%),
+    linear-gradient(197deg, rgba(255, 240, 164, 1) 0%, rgba(255, 240, 164, 0) 100%),
+    radial-gradient(59% 74% at 10% -10%, rgba(49, 132, 255, 0.8) 0%, rgba(56, 75, 246, 0.21) 52%, rgba(62, 246, 246, 0) 100%),
+    linear-gradient(143deg, rgba(62, 158, 246, 1) 0%, rgba(238, 43, 183, 0.33) 30%, rgba(246, 62, 106, 0) 56%),
+    linear-gradient(288deg, rgba(217, 155, 255, 1) 33%, rgba(217, 170, 221, 0) 97%);
 }
 
 body {
@@ -86,7 +70,7 @@ header {
 }
 
 .logo {
-  font-size: 1.25rem;
+  font-size: 2.25rem;
   font-weight: bold;
   color: var(--text-color);
 }
