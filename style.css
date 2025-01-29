@@ -489,11 +489,11 @@ header {
 }
 .highlights-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Reducido tamaño mínimo */
   align-items: stretch;
   justify-items: stretch;
-  gap: 0.5rem;
-  margin: 0.5rem;
+  gap: 1rem; /* Aumentado el espacio entre elementos */
+  margin: 1rem;
 }
 .highlights .clip h3 {
   margin: 1rem;
@@ -503,9 +503,10 @@ header {
 .highlights .clip iframe {
   width: 100%;
   border-radius: 16px;
-  height:40rem;
-  box-shadow: 0px 0px 25px #ff0000;
+  height: 30rem; /* Reducido para mejor adaptación */
+  box-shadow: 0px 0px 15px rgba(255, 0, 0, 0.7); /* Mejorado el sombreado */
 }
+
 
 /* Footer Section */
 .footer {
